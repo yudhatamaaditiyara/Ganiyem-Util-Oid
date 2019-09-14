@@ -39,14 +39,6 @@ const hexmap = [
  * @param {number} size
  * @returns {Buffer}
  */
-function createTime(){
-	return ~~(Date.now() / 1E3);
-}
-
-/**
- * @param {number} size
- * @returns {Buffer}
- */
 function createRandom(size){
 	return crypto.randomBytes(size);
 }
@@ -61,6 +53,14 @@ function createSequence(size){
 }
 
 /**
+ * @param {number} size
+ * @returns {Buffer}
+ */
+function createTimestamp(){
+	return ~~(Date.now() / 1E3);
+}
+
+/**
  * @+
  */
-module.exports = {hexmap, createTime, createRandom, createSequence};
+module.exports = {hexmap, createRandom, createSequence, createTimestamp};

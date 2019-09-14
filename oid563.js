@@ -40,7 +40,7 @@ class Oid563 extends Oid
 	 * @returns {Oid563}
 	 */
 	static create(){
-		return new Oid563(Oid563.generate(util.createTime()));
+		return new Oid563(Oid563.generate(util.createTimestamp()));
 	}
 
 	/**
@@ -52,18 +52,18 @@ class Oid563 extends Oid
 	}
 
 	/**
-	 * @param {number} time
+	 * @param {number} timestamp
 	 * @returns {string}
 	 */
-	static generate(time){
+	static generate(timestamp){
 		let id = '';
 		let seq = sequence();
 		/* 5-byte time */
-		id += util.hexmap[(time >> 32) & 0xff];
-		id += util.hexmap[(time >> 24) & 0xff];
-		id += util.hexmap[(time >> 16) & 0xff];
-		id += util.hexmap[(time >> 8) & 0xff];
-		id += util.hexmap[time & 0xff];
+		id += util.hexmap[(timestamp >> 32) & 0xff];
+		id += util.hexmap[(timestamp >> 24) & 0xff];
+		id += util.hexmap[(timestamp >> 16) & 0xff];
+		id += util.hexmap[(timestamp >> 8) & 0xff];
+		id += util.hexmap[timestamp & 0xff];
 		/* 6-byte random */
 		id += util.hexmap[random[0]];
 		id += util.hexmap[random[1]];

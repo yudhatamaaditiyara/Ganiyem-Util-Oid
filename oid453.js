@@ -17,7 +17,6 @@
 
 const Oid = require('./oid');
 const util = require('./util');
-let regexp = /^[0-9a-f]{24}$/;
 let random = util.createRandom(5);
 let sequence = util.createSequence(0xffffff);
 
@@ -48,7 +47,7 @@ class Oid453 extends Oid
 	 * @returns {boolean}
 	 */
 	static validate(id){
-		return regexp.test(String(id));
+		return /^[0-9a-f]{24}$/.test(String(id));
 	}
 
 	/**

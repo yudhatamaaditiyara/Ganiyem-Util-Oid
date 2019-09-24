@@ -32,28 +32,28 @@ class Oid
 	}
 
 	/**
-	 * @return {string}
+	 * @returns {string}
 	 */
 	getId(){
 		return this._id;
 	}
 
 	/**
-	 * @return {number}
+	 * @returns {number}
 	 */
 	getByteSize(){
 		return this._byteSize;
 	}
 
 	/**
-	 * @return {number}
+	 * @returns {number}
 	 */
 	getCharSize(){
 		return this._charSize;
 	}
 
 	/**
-	 * @return {number}
+	 * @returns {number}
 	 */
 	getTimestamp(){
 		if (this._timestamp == null) {
@@ -63,7 +63,7 @@ class Oid
 	}
 
 	/**
-	 * @return {string}
+	 * @returns {string}
 	 */
 	toString(){
 		return this._id;

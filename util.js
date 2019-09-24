@@ -49,12 +49,11 @@ function createRandom(size){
  */
 function createSequence(size){
 	let sequence = ~~(Math.random() * size);
-	return ()=>(sequence = (sequence + 1) % size);
+	return () => (sequence = (sequence + 1) % size);
 }
 
 /**
- * @param {number} size
- * @returns {Buffer}
+ * @returns {number}
  */
 function createTimestamp(){
 	return ~~(Date.now() / 1E3);

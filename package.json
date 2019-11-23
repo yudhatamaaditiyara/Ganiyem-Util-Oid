@@ -6,5 +6,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yudhatamaaditiyara/Ganiyem-Util-Oid.git"
+  },
+  "dependencies": {
+    "ganiyem-error": "^1.5.2"
   }
 }
